@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:navigator_pages/home_page.dart';
+import 'package:navigator_pages/views/home_view.dart';
 
 class AppWidget extends StatelessWidget {
   // This widget is the root of your application.
