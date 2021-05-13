@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigator_pages/screens/home_screen.dart';
 
 class FourthScreen extends StatelessWidget {
   //
@@ -7,7 +8,7 @@ class FourthScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Fourth view'),
+        title: Text('Fourth'),
         centerTitle: true,
       ),
       body: Column(
@@ -27,7 +28,14 @@ class FourthScreen extends StatelessWidget {
                   elevation: 5,
                   // enableFeedback: true,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => HomeScreen(),
+                    ),
+                  );
+                },
               ),
             ],
           ),

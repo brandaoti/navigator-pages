@@ -7,7 +7,7 @@ class SecondScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Segunda tela'),
+        title: Text('Second'),
         centerTitle: true,
       ),
       body: Column(

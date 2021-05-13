@@ -8,7 +8,7 @@ class ThirdScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Third view'),
+        title: Text('Third'),
         centerTitle: true,
       ),
       body: Column(
