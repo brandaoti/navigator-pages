@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:navigator_pages/screens/second_view.dart';
 import 'package:navigator_pages/screens/third_screen.dart';
+import 'package:navigator_pages/shared/components/button_component.dart';
+import 'package:navigator_pages/shared/components/container_box_shadow_component.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key key}) : super(key: key);
@@ -8,79 +10,47 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orange,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('First'),
         centerTitle: true,
       ),
-      body: Row(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Expanded(
-            flex: 4,
-            child: Column(
-              // crossAxisAlignment: CrossAxisAlignment.start,
-              // ]
+          Text('Informação 1'),
+          Divider(
+            height: 50.0,
+            color: Colors.black,
+            indent: 20.0,
+            endIndent: 20.0,
+          ),
+
+          //
+          ContainerBoxShadowComponent(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text('Pagina inicial'),
+                ButtonComponent(
+                    label: 'Second',
+                    onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => SecondScreen(),
+                        ))),
+                //
+                ButtonComponent(
+                    label: 'Third',
+                    onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => ThirdScreen(),
+                        ))),
               ],
             ),
           ),
-          Expanded(
-            flex: 1,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  height: 200,
-                  width: 50,
-                  padding: EdgeInsets.all(12.0),
-                  decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      ElevatedButton(
-                        child: Text('2'),
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
-                          ),
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => SecondScreen(),
-                            ),
-                          );
-                        },
-                      ),
-                      SizedBox(height: 20.0),
-                      ElevatedButton(
-                        child: Text('3'),
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
-                          ),
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => ThirdScreen(),
-                            ),
-                          );
-                        },
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
+
+          //
         ],
       ),
     );

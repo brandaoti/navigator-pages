@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:navigator_pages/screens/fourth_screen.dart';
+import 'package:navigator_pages/shared/components/button_component.dart';
+import 'package:navigator_pages/shared/components/container_box_shadow_component.dart';
 
 class ThirdScreen extends StatelessWidget {
   //
@@ -14,39 +16,24 @@ class ThirdScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('Informação!'),
+          Text('Ola meu amigo!'),
 
           Divider(height: 50.0, color: Colors.orange),
           //
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              OutlinedButton.icon(
-                icon: Icon(Icons.add_to_home_screen_rounded),
-                label: Text('Tela 2'),
-                style: OutlinedButton.styleFrom(
-                  elevation: 5,
-                  // enableFeedback: true,
-                ),
-                onPressed: () {},
-              ),
-              OutlinedButton.icon(
-                icon: Icon(Icons.add_to_home_screen_rounded),
-                label: Text('Tela 4'),
-                style: OutlinedButton.styleFrom(
-                  elevation: 5,
-                  // enableFeedback: true,
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => FourthScreen(),
-                    ),
-                  );
-                },
-              ),
-            ],
+          ContainerBoxShadowComponent(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ButtonComponent(
+                    label: 'Third',
+                    onPressed: () => Navigator.pop(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => FourthScreen(),
+                        ))),
+                ButtonComponent(label: 'Fourth', onPressed: () {}),
+              ],
+            ),
           ),
         ],
       ),

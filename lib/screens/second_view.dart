@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:navigator_pages/screens/home_screen.dart';
+import 'package:navigator_pages/screens/third_screen.dart';
+import 'package:navigator_pages/shared/components/button_component.dart';
+import 'package:navigator_pages/shared/components/container_box_shadow_component.dart';
 
 class SecondScreen extends StatelessWidget {
   //
@@ -17,28 +21,20 @@ class SecondScreen extends StatelessWidget {
 
           Divider(height: 50.0, color: Colors.orange),
           //
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              OutlinedButton.icon(
-                icon: Icon(Icons.add_to_home_screen_rounded),
-                label: Text('Tela 3'),
-                style: OutlinedButton.styleFrom(
-                  elevation: 5,
-                  // enableFeedback: true,
-                ),
-                onPressed: () {},
-              ),
-              OutlinedButton.icon(
-                icon: Icon(Icons.add_to_home_screen_rounded),
-                label: Text('Tela 4'),
-                style: OutlinedButton.styleFrom(
-                  elevation: 5,
-                  // enableFeedback: true,
-                ),
-                onPressed: () {},
-              ),
-            ],
+          ContainerBoxShadowComponent(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ButtonComponent(
+                    label: 'Third',
+                    onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => ThirdScreen(),
+                        ))),
+                ButtonComponent(label: 'Fourth', onPressed: () {}),
+              ],
+            ),
           ),
         ],
       ),

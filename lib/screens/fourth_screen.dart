@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:navigator_pages/screens/home_screen.dart';
+import 'package:navigator_pages/shared/components/button_component.dart';
+import 'package:navigator_pages/shared/components/container_box_shadow_component.dart';
 
 class FourthScreen extends StatelessWidget {
   //
@@ -14,30 +16,18 @@ class FourthScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('Informação!'),
+          Text('Ola meu amigo!'),
 
           Divider(height: 50.0, color: Colors.orange),
           //
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              OutlinedButton.icon(
-                icon: Icon(Icons.add_to_home_screen_rounded),
-                label: Text('Home'),
-                style: OutlinedButton.styleFrom(
-                  elevation: 5,
-                  // enableFeedback: true,
-                ),
-                onPressed: () {
-                  Navigator.pop(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => HomeScreen(),
-                    ),
-                  );
-                },
-              ),
-            ],
+          ContainerBoxShadowComponent(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ButtonComponent(label: 'Third', onPressed: () {}),
+                ButtonComponent(label: 'Fourth', onPressed: () {}),
+              ],
+            ),
           ),
         ],
       ),

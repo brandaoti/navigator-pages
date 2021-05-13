@@ -6,8 +6,8 @@ class ButtonComponent extends StatelessWidget {
 
   const ButtonComponent({
     Key key,
-    this.label,
-    this.onPressed,
+    @required this.label,
+    @required this.onPressed,
   }) : super(key: key);
 
   @override
