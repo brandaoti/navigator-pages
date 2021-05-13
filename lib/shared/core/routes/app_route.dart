@@ -1,6 +1,6 @@
 class AppRoute {
-  static const HOME = '/';
-  static const SECOND_VIEW = '/second';
-  static const THIRD_VIEW = '/third';
-  static const FOURTH_VIEW = '/fourth';
+  static const HOME = '/home';
+  static const SECOND_SCREEN = '/second';
+  static const THIRD_SCREEN = '/';
+  static const FOURTH_SCREEN = '/fourth';
 }

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:navigator_pages/views/second_view.dart';
-import 'package:navigator_pages/views/third_page.dart';
+import 'package:navigator_pages/screens/second_view.dart';
+import 'package:navigator_pages/screens/third_screen.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key key}) : super(key: key);
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -53,11 +53,7 @@ class HomePage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SecondPage(
-                                nome: 'Daniel Brandão',
-                                idade: 29,
-                                color: Colors.blue,
-                              ),
+                              builder: (context) => SecondScreen(),
                             ),
                           );
                         },
@@ -74,7 +70,7 @@ class HomePage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => ThirdPage(),
+                              builder: (context) => ThirdScreen(),
                             ),
                           );
                         },
