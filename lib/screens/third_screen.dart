@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:navigator_pages/screens/fourth_screen.dart';
-import 'package:navigator_pages/shared/components/button_component.dart';
-import 'package:navigator_pages/shared/components/container_box_shadow_component.dart';
-import 'package:navigator_pages/shared/core/routes/app_route.dart';
+import 'fourth_screen.dart';
+import '../shared/components/button_component.dart';
+import '../shared/components/container_box_shadow_component.dart';
+import '../shared/core/routes/app_route.dart';
 
 class FourthParam {
   final String name;

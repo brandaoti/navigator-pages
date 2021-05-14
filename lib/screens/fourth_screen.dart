@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:navigator_pages/screens/home_screen.dart';
-import 'package:navigator_pages/screens/third_screen.dart';
-import 'package:navigator_pages/shared/components/button_component.dart';
-import 'package:navigator_pages/shared/components/container_box_shadow_component.dart';
-import 'package:navigator_pages/shared/core/routes/app_route.dart';
+import 'home_screen.dart';
+import 'third_screen.dart';
+import '../shared/components/button_component.dart';
+import '../shared/components/container_box_shadow_component.dart';
+import '../shared/core/routes/app_route.dart';
 
 class ThirdParameters {
   // final String title;

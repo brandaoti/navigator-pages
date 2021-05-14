@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:navigator_pages/screens/fourth_screen.dart';
-import 'package:navigator_pages/screens/home_screen.dart';
-import 'package:navigator_pages/screens/second_view.dart';
-import 'package:navigator_pages/screens/third_screen.dart';
-import 'package:navigator_pages/shared/core/routes/app_route.dart';
+
+import 'screens/fourth_screen.dart';
+import 'screens/home_screen.dart';
+import 'screens/second_view.dart';
+import 'screens/third_screen.dart';
+import 'shared/core/routes/app_route.dart';
 
 class AppWidget extends StatelessWidget {
   // This widget is the root of your application.
