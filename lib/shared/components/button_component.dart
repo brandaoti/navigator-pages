@@ -16,6 +16,13 @@ class ButtonComponent extends StatelessWidget {
       child: OutlinedButton.icon(
         label: Text(label),
         icon: Icon(Icons.add_to_home_screen_rounded),
+        style: OutlinedButton.styleFrom(
+          elevation: 5,
+          backgroundColor: Colors.white,
+          shadowColor: Colors.grey,
+          onSurface: Colors.red,
+          // primary: Colors.white,
+        ),
         onPressed: onPressed,
       ),
     );
