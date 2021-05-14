@@ -3,9 +3,12 @@ import 'package:flutter/material.dart';
 import '../shared/components/button_component.dart';
 import '../shared/components/container_box_shadow_component.dart';
 import '../shared/core/routes/app_route.dart';
+import 'fourth_screen.dart';
 
 class SecondScreen extends StatelessWidget {
   //
+
+  final String msg = '2° Screen';
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +20,11 @@ class SecondScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('texto'),
+          Text(
+            msg,
+            style: TextStyle(fontSize: 24.0),
+          ),
+          SizedBox(height: 50.0),
 
           Divider(
             height: 50.0,
@@ -37,7 +44,18 @@ class SecondScreen extends StatelessWidget {
                           context,
                           AppRoute.THIRD_SCREEN,
                         )),
-                ButtonComponent(label: 'Fourth', onPressed: () {}),
+                ButtonComponent(
+                    label: 'Fourth',
+                    onPressed: () {
+                      // Não passei uma cor
+                      // A tela 4 vai assumir a cor preta por padrão
+                      final args = GetDataFromFourthScreen();
+                      Navigator.pushNamed(
+                        context,
+                        AppRoute.FOURTH_SCREEN,
+                        arguments: args,
+                      );
+                    }),
               ],
             ),
           ),

@@ -5,19 +5,19 @@ import '../shared/components/button_component.dart';
 import '../shared/components/container_box_shadow_component.dart';
 import '../shared/core/routes/app_route.dart';
 
-class ThirdParameters {
-  // final String title;
+class GetDataFromFourthScreen {
   final Color color;
 
-  ThirdParameters({this.color = Colors.black});
+  GetDataFromFourthScreen({this.color = Colors.black});
 }
 
 class FourthScreen extends StatelessWidget {
   //
-
   @override
   Widget build(BuildContext context) {
-    final args = ModalRoute.of(context).settings.arguments as ThirdParameters;
+    final args = ModalRoute.of(context).settings.arguments as GetDataFromFourthScreen;
+
+    final String msg = '1° Screen';
 
     return Scaffold(
       appBar: AppBar(
@@ -28,7 +28,11 @@ class FourthScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('args.title'),
+          Text(
+            msg,
+            style: TextStyle(fontSize: 24.0),
+          ),
+          SizedBox(height: 50.0),
 
           Divider(
             height: 50.0,
@@ -57,7 +61,7 @@ class FourthScreen extends StatelessWidget {
                 ButtonComponent(
                     label: 'First',
                     onPressed: () {
-                      final args = ComeBackFourth();
+                      final args = GetDataFromFirstScreen();
 
                       Navigator.popAndPushNamed(
                         context,

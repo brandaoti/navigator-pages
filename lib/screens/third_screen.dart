@@ -17,11 +17,14 @@ class FourthParam {
 
 class ThirdScreen extends StatelessWidget {
   //
-
+  final String msg = '3° Screen';
   @override
   Widget build(BuildContext context) {
     var arg = ModalRoute.of(context).settings.arguments as FourthParam;
 
+    // Verificando se o args vem nulo
+    // Atribuindo novas informações no arg
+    // Dessa forma, a tela não vai crashar
     if (arg == null) {
       arg = FourthParam(name: '', idade: null);
     }
@@ -34,8 +37,14 @@ class ThirdScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Text(
+            msg,
+            style: TextStyle(fontSize: 24.0),
+          ),
+
           Text(arg.name),
           Text(arg.getIdade.toString()),
+          SizedBox(height: 50.0),
 
           Divider(
             height: 50.0,
@@ -61,7 +70,7 @@ class ThirdScreen extends StatelessWidget {
                 ButtonComponent(
                   label: 'Fourth',
                   onPressed: () {
-                    final args = ThirdParameters(color: Colors.white);
+                    final args = GetDataFromFourthScreen(color: Colors.white);
 
                     Navigator.popAndPushNamed(
                       context,

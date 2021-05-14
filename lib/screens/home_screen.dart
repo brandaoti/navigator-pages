@@ -4,11 +4,11 @@ import '../shared/components/button_component.dart';
 import '../shared/components/container_box_shadow_component.dart';
 import '../shared/core/routes/app_route.dart';
 
-class ComeBackFourth {
+class GetDataFromFirstScreen {
   final String name;
   final int idade;
 
-  ComeBackFourth({this.name = 'Daniel', this.idade = 29});
+  GetDataFromFirstScreen({this.name = 'Daniel', this.idade = 29});
 
   get getIdade {
     return idade == null ? '' : idade;
@@ -23,14 +23,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  String msg = 'Mensagem';
+  final String msg = '1° Screen';
 
   @override
   Widget build(BuildContext context) {
-    var arg = ModalRoute.of(context).settings.arguments as ComeBackFourth;
+    var arg = ModalRoute.of(context).settings.arguments as GetDataFromFirstScreen;
 
     if (arg == null) {
-      arg = ComeBackFourth(name: 'Minha informação', idade: null);
+      arg = GetDataFromFirstScreen(name: '', idade: null);
     }
 
     return Scaffold(
@@ -42,6 +42,12 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Text(
+            msg,
+            style: TextStyle(fontSize: 24.0),
+          ),
+          SizedBox(height: 50.0),
+
           Text(arg.name),
           Text(arg.getIdade.toString()),
 
