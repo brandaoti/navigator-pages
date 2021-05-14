@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'home_screen.dart';
-import 'third_screen.dart';
+
 import '../shared/components/button_component.dart';
 import '../shared/components/container_box_shadow_component.dart';
+import '../shared/components/text_component.dart';
 import '../shared/core/routes/app_route.dart';
+import 'home_screen.dart';
+import 'third_screen.dart';
 
 class GetDataFromFourthScreen {
   final Color color;
@@ -17,7 +19,7 @@ class FourthScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final args = ModalRoute.of(context).settings.arguments as GetDataFromFourthScreen;
 
-    final String msg = '1° Screen';
+    final String msg = '4° Screen';
 
     return Scaffold(
       appBar: AppBar(
@@ -28,11 +30,7 @@ class FourthScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            msg,
-            style: TextStyle(fontSize: 24.0),
-          ),
-          SizedBox(height: 50.0),
+          TextComponent(data: msg),
 
           Divider(
             height: 50.0,

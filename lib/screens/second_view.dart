@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../shared/components/text_component.dart';
 
 import '../shared/components/button_component.dart';
 import '../shared/components/container_box_shadow_component.dart';
@@ -20,11 +21,9 @@ class SecondScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            msg,
-            style: TextStyle(fontSize: 24.0),
-          ),
-          SizedBox(height: 50.0),
+          TextComponent(data: msg),
+
+          // SizedBox(height: 50.0),
 
           Divider(
             height: 50.0,
