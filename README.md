@@ -48,7 +48,7 @@ Você deve criar um app com 4 telas, com as seguintes características:
 [//]: # (Adicione seus gifs / imagens aqui:)
 
 <p align="center"> 
-  <img src="github/screenshots/animation.gif" alt="demo" height="600"> 
+  <img src="github/screenshots/gif.gif" alt="demo" height="600"> 
 </p>
 
 
